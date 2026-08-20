@@ -21,16 +21,16 @@ completed_orders=[]
 
 for item in orders:
     if item['status'] == 'Completed':
-        completed_orders.append(item)
+        completed_orders.append(item['amount'])
 
-for item in completed_orders:
-    print(f'Revenue of completed orders : {item}')
+profit = sum(completed_orders)
+print(f'Revenue of completed orders : {profit}')
 
 #High-Value Customers
 vip_customers = []
 for item in orders:
     if item['amount'] >= 300:
-        vip_customers.append(item)
+        vip_customers.append(item['customer'])
 
 for item in vip_customers:
     print(f'High-Value Customers : {item}')
