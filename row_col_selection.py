@@ -1,29 +1,37 @@
+from operator import index
+
 import pandas as pd
 
-# Clean sample DataFrame using pure Pandas
+# Employee Dataset
 data = [
-    {"order_id": 1001, "customer": "Fenil", "category": "Electronics", "amount": 250, "status": "Completed"},
-    {"order_id": 1002, "customer": "Ankit", "category": "Furniture", "amount": 450, "status": "Completed"},
-    {"order_id": 1003, "customer": "Rahul", "category": "Electronics", "amount": 120, "status": "Cancelled"},
-    {"order_id": 1004, "customer": "Priya", "category": "Stationery", "amount": 35, "status": "Completed"},
-    {"order_id": 1005, "customer": "Karan", "category": "Electronics", "amount": 800, "status": "Completed"},
-    {"order_id": 1006, "customer": "Sonia", "category": "Furniture", "amount": 150, "status": "Pending"}
+    {"emp_id": 101, "name": "Fenil", "department": "IT", "salary": 85000, "status": "Active"},
+    {"emp_id": 102, "name": "Ankit", "department": "HR", "salary": 62000, "status": "Active"},
+    {"emp_id": 103, "name": "Rahul", "department": "IT", "salary": 75000, "status": "On Leave"},
+    {"emp_id": 104, "name": "Priya", "department": "Finance", "salary": 90000, "status": "Active"},
+    {"emp_id": 105, "name": "Karan", "department": "IT", "salary": 110000, "status": "Active"},
+    {"emp_id": 106, "name": "Sonia", "department": "Finance", "salary": 58000, "status": "Resigned"}
 ]
+
 df = pd.DataFrame(data)
-# print(df[['order_id','city','customer_name']])
-# select_rows = df.loc[(df.customer == 'Fenil') & (df.amount >= 300)]
-# print(select_rows)
 
-# print(df.iloc[0:3])
-# 1. Filter completed orders once
-fillter_by_amount = df[df['status'] == 'Completed']
+# 1. Filter Active Employees
+# active_emp = df[df['status'] == 'Active']
 
-# 2. Derive metrics directly from the filtered DataFrame
-total_order = len(fillter_by_amount)
-total_profit = fillter_by_amount['amount'].sum()
+# # 2. Derive Metrics
+# total_active = len(active_emp)
+# total_payroll = active_emp['salary'].sum()
+# avg_salary = active_emp['salary'].mean()
+# bonous_col = active_emp['bonus'] = active_emp['salary'] * 0.1
 
-print(f'total order : {total_order}')
-print(f'total profit : ${total_profit}\n\n')
+# # 3. Print Summary
+# print(f"Total Active Employees : {total_active}")
+# print(f"Total Active Payroll  : ${total_payroll:,}")
+# print(f"Average Active Salary  : ${avg_salary:,.2f}\n")
 
-# Hide index numbers for a cleaner table print
-print(fillter_by_amount.to_string(index=False))
+
+
+# # 4. Clean Table Display
+# print(active_emp[['emp_id', 'name', 'department', 'salary','bonus']].to_string(index=False))
+
+change_name = df.loc[0,'name'] = ['jay']
+print(df[['emp_id', 'name', 'salary']])
