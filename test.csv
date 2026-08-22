@@ -1,0 +1,7 @@
+id,user,category,amount,status
+1001,Fenil,Electronics,250,Completed
+1002,Ankit,Furniture,450,Completed
+1003,Rahul,Electronics,120,Cancelled
+1004,Priya,Stationery,35,Completed
+1005,Karan,Electronics,800,Completed
+1006,Sonia,Furniture,150,Pending

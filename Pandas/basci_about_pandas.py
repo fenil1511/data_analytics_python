@@ -15,6 +15,7 @@ data = [
 
 # 3. Convert the raw list into a Pandas DataFrame (creates a table grid with rows and columns)
 df = pd.DataFrame(data)
+# df.head(3)
 
 # --- PRINTING OPTIONS ---
 
@@ -53,5 +54,6 @@ print('top customer')
 print(top_customer)
 print("\n--- Sales by Category ---")
 print(category_sales)
+
 
 
