@@ -14,6 +14,10 @@ data = [
 
 df = pd.DataFrame(data)
 
+sorted_df = df.sort_values('salary', ascending=False)
+
+print(sorted_df)
+
 # 1. Filter Active Employees
 # active_emp = df[df['status'] == 'Active']
 
@@ -33,5 +37,5 @@ df = pd.DataFrame(data)
 # # 4. Clean Table Display
 # print(active_emp[['emp_id', 'name', 'department', 'salary','bonus']].to_string(index=False))
 
-change_name = df.loc[0,'name'] = ['jay']
-print(df[['emp_id', 'name', 'salary']])
+# change_name = df.loc[0,'name'] = ['jay']
+# print(df[['emp_id', 'name', 'salary']])
