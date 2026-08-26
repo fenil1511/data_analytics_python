@@ -1,8 +1,0 @@
-emp_id,full_name,department,salary,join_date,month
-101,Fenil Patel,IT,0.0,2022-01-15,Jan
-102,Ankit Sharma,HR,62000.0,2021-06-20,Jun
-103,Rahul Verma,IT,0.0,2023-01-12,Jan
-104,Priya,FINANCE,0.0,2020-11-01,Nov
-105,Karan,unknown,110000.0,2019-08-05,Aug
-106,Sonia Mehta,FINANCE,5000.0,,Unknown
-107,,IT,90000.0,,Unknown
