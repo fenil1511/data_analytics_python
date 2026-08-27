@@ -91,7 +91,7 @@ df['Payment_Method'] = df['Payment_Method'].replace(['Error', 'Unknown'], 'Unkno
 # date 
 df['Date'] = df['Date'].fillna('No Date')
 
-unique_val= df['Price_Per_Unit'].unique()
+unique_val= df['Quantity'].unique()
 print(unique_val)
 # print('-'*100,'\n')
 

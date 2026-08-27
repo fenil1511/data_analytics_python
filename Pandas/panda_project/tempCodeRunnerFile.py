@@ -1,2 +1,1 @@
-df.info()
-# print('-'*100,'\n')
+Discount_Pct
