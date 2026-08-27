@@ -47,12 +47,10 @@ df['Total_Amount'] = df['Total_Amount'].fillna(df['Item_Price'] * df['Quantity']
 
 
 #Discount_Pct
-
 df['Discount_Pct'] = df['Discount_Pct'].str.replace('%',' ',regex=False)
 df['Discount_Pct'] = pd.to_numeric(df['Discount_Pct'], errors='coerce')
 df.loc[df['Discount_Pct'] > 100, 'Discount_Pct'] = np.nan
 df['Discount_Pct'] = df['Discount_Pct'].fillna(0)
-
 
 
 #Order_Date
