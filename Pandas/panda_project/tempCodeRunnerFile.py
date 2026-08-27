@@ -1,3 +1,2 @@
-
-#     df[col] = df[col].fillna('UNKNOWN')
-#     df[col] = df[col].replace('ERROR','UNKNOWN').fillna('UNKNOWN')
+df.info()
+# print('-'*100,'\n')
